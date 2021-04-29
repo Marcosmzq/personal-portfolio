@@ -1,16 +1,35 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*GOOGLE FONTS*/
+
+/*POPPINS*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+
+/*Hachi Maru Pop*/
+
+@import url("https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap");
+
+/*Nunito*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,800;1,200;1,300;1,700;1,900&display=swap");
+
+.navbar-li {
+  @apply my-1 font-poppins font-bold text-2xl text-gray-800 hover:text-rose;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.layout {
+  @apply min-h-screen w-screen flex flex-col sm:flex-row sm:justify-between container;
 }
 
-* {
-  box-sizing: border-box;
+.left-side {
+  @apply h-screen w-full sm:w-1/2 flex flex-col items-center justify-around;
+}
+
+.left-title {
+  @apply font-black font-nunito text-white text-6xl text-center;
+}
+.right-side {
+  @apply p-4 h-screen w-full sm:w-1/2 flex flex-col items-center justify-around;
 }
